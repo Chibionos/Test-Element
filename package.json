@@ -14,7 +14,7 @@
     "docs:gen": "eleventy --config=.eleventy.cjs",
     "docs:gen:watch": "eleventy --config=.eleventy.cjs --watch",
     "docs:build": "rollup -c --file docs/my-element.bundled.js",
-    "docs:assets": "cp node_modules/prismjs/themes/prism-okaidia.css docs/",
+    "docs:assets": "robocopy node_modules/prismjs/themes docs prism-okaidia.css",
     "docs:serve": "es-dev-server --root-dir=docs --node-resolve --watch",
     "analyze": "wca analyze \"src/**/*.ts\" --outFile custom-elements.json",
     "serve": "es-dev-server --node-resolve --watch",
@@ -32,6 +32,7 @@
   "author": "The Polymer Authors",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "@material/mwc-button": "^0.14.1",
     "lit-element": "^2.2.1"
   },
   "devDependencies": {

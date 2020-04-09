@@ -13,7 +13,7 @@
  */
 
 import {LitElement, html, customElement, property, css} from 'lit-element';
-
+import "@material/mwc-button";
 /**
  * An example element.
  *
@@ -46,10 +46,10 @@ export class MyElement extends LitElement {
   render() {
     return html`
       <h1>Hello, ${this.name}!</h1>
-      <button @click=${this._onClick} part="button">
+      <mwc-button @click=${this._onClick} part="button">
         Click Count: ${this.count}
-      </button>
-      <slot></slot>
+      </mwc-button>
+      
     `;
   }
 
